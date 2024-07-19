@@ -1,0 +1,83 @@
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.display {
+  background-color: #eee;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  border: 1px solid #ddd;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: none;          /* Remove default border */
+  border-radius: 8px;     /* Rounder corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease; /* Smooth transition for color */
+}
+
+.btn:hover, .clear:hover, .operator:hover, .equals:hover {
+  background-color: #e0e0e0; /* Lighter shade on hover */
+}
+
+.btn:active {
+  background-color: #007bff; /* Blue on click */
+  color: white;
+}
+
+.zero {
+  grid-column: span 2; /* Span two columns for the '0' button */
+}
+
+.operator {
+  background-color: #ffa500;
+  color: white;
+  padding: 15px;
+  border: none;          /* Remove default border */
+  border-radius: 8px;     /* Rounder corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease; /* Smooth transition for color */
+}
+
+
+.clear {
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border: none;          /* Remove default border */
+  border-radius: 8px;     /* Rounder corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease; /* Smooth transition for color */
+}
+
+.equals {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border: none;          /* Remove default border */
+  border-radius: 8px;     /* Rounder corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease; /* Smooth transition for color */
+}
