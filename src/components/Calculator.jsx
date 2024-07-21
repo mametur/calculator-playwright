@@ -63,8 +63,8 @@ function Calculator() {
 
       <div className="buttons">
         {/* Number Buttons */}
-        {[7, 8, 9, 4, 5, 6, 1, 2, 3].map(number => (
-          <button className="btn" key={number} onClick={() => handleNumberClick(number.toString())}>
+        {[6,7, 8, 9, 2, 3, 4, 5, 1].map(number => (
+          <button data-testid={`btn-${number}`} className="btn" key={number} onClick={() => handleNumberClick(number.toString())}>
             {number}
           </button>
         ))}
@@ -73,15 +73,15 @@ function Calculator() {
 
         {/* Operator Buttons */}
         {['+', '-', '*', '/'].map(operator => (
-          <button className="operator" key={operator} onClick={() => handleOperatorClick(operator)}>
+          <button data-testid={`btn-${operator}`} className="operator" key={operator} onClick={() => handleOperatorClick(operator)}>
             {operator}
           </button>
         ))}
 
         {/* Other Buttons */}
-        <button className="clear" onClick={handleAllClearClick}>AC</button> {/* Clear all */}
-        <button className="clear" onClick={handleClearClick}>C</button>
-        <button className="equals" onClick={handleEqualsClick}>=</button>
+        <button data-testid="display" className="clear" onClick={handleAllClearClick}>AC</button> {/* Clear all */}
+        <button data-testid="clear" className="clear" onClick={handleClearClick}>C</button>
+        <button data-testid="equals" className="equals" onClick={handleEqualsClick}>=</button>
       </div>
     </div>
   );
