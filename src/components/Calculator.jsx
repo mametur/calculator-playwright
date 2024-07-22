@@ -16,6 +16,7 @@ function Calculator() {
     setDisplayValue('0');
   };
 
+
   const handleAllClearClick = () => {
     setDisplayValue('0');
     setPrevOperand(null);
@@ -68,20 +69,19 @@ function Calculator() {
             {number}
           </button>
         ))}
-        <button className="btn zero" onClick={() => handleNumberClick('0')}>0</button>
-        <button className="btn" onClick={() => handleNumberClick('.')}>.</button>
+        <button data-testid={'btn-0'} className="btn zero" onClick={() => handleNumberClick('0')}>0</button>
+        <button data-testid={'btn-.'} className="btn" onClick={() => handleNumberClick('.')}>.</button>
 
-        {/* Operator Buttons */}
-        {['+', '-', '*', '/'].map(operator => (
+        {['+','-', '*', '/'].map(operator => (
           <button data-testid={`btn-${operator}`} className="operator" key={operator} onClick={() => handleOperatorClick(operator)}>
             {operator}
-          </button>
+        </button>
         ))}
 
         {/* Other Buttons */}
-        <button data-testid="display" className="clear" onClick={handleAllClearClick}>AC</button> {/* Clear all */}
-        <button data-testid="clear" className="clear" onClick={handleClearClick}>C</button>
-        <button data-testid="equals" className="equals" onClick={handleEqualsClick}>=</button>
+        <button data-testid="btn-AC" className="clear" onClick={handleAllClearClick}>AC</button> {/* Clear all */}
+        <button data-testid="btn-C" className="clear" onClick={handleClearClick}>C</button>
+        <button data-testid="btn-=" className="equals" onClick={handleEqualsClick}>=</button>
       </div>
     </div>
   );
