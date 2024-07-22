@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Calculator E2E', () => {
   test('should perform a full calculation with correct order of operations', async ({ page }) => {
-    await page.goto('http://localhost:3000'); // Make sure your React app is running
+    await page.goto('https://main.d237e8gdducc91.amplifyapp.com/'); // Make sure your React app is running
 
     // Simulate user input: 8 + 2 * 5 =
     await page.locator('[data-testid="btn-8"]').click();
